@@ -16,12 +16,15 @@ for (const img of galleryItems) {
 
 galleryRef.insertAdjacentHTML('beforeend', markup);
 
+const lightbox = new SimpleLightbox('.gallery__item');
+lightbox.close();
+
 galleryRef.addEventListener('click', (event) => {
   if (event.target.tagName !== 'IMG') return;
 
-  event.preventDefault();
+  lightbox.show;
 
-  const lightbox = new SimpleLightbox('.gallery__item');
+  event.preventDefault();
 
   document.addEventListener('keydown', (eventKeyboard) => {
     if (eventKeyboard.key === 'Escape') lightbox.close();
