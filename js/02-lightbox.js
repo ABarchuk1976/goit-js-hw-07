@@ -1,4 +1,4 @@
-import SimpleLightbox from '../node_modules/simplelightbox/src/simple-lightbox.js';
+import SimpleLightbox from './simple-lightbox.min';
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 const galleryRef = document.querySelector('.gallery');
